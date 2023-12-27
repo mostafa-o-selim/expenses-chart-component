@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,700;1,9..40,400&display=swap');
+$colors: (
+  "Soft_red": hsl(10, 79%, 65%),
+  "Cyan": hsl(186, 34%, 60%),
+  "Dark_brown": hsl(25, 47%, 15%),
+  "Medium_brown": hsl(28, 10%, 53%),
+  "Cream": hsl(27, 66%, 92%),
+  "Very_pale_orange": hsl(33, 100%, 98%)
+);
+
+body,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+strong {
+  font-weight: 700;
+}
+
+main,
+section,
+img,
+svg {
+  display: block;
+}
+
+#expenses {
+  background-color: map-get($colors, "Cream");
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+
+  .balance {
+    width: 91.466666667%;
+    max-width: 33.75rem;
+    line-height: 1.3;
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .padding {
+      padding: 1.25rem;
+
+      @media (min-width: 768px) {
+        padding: 1.375rem 2rem;
+      }
+    }
+
+    .balance-head {
+      background-color: map-get($colors, "Soft_red");
+      border-radius: 0.75rem;
+
+      h2 {
+        color: map-get($colors, "Cream");
+        font-size: inherit;
+      }
+
+      strong {
+        color: map-get($colors, "Very_pale_orange");
+        font-size: 2rem;
+        font-weight: 700;
+
+        @media (min-width: 768px) {
+          font-size: 2.25rem;
+        }
+      }
+    }
+
+    .balance-main {
+      background-color: map-get($colors, "Very_pale_orange");
+      border-radius: 0.75rem;
+      margin-top: 1rem;
+
+      >h3 {
+        color: map-get($colors, "Dark_brown");
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .gray {
+        color: map-get($colors, "Medium_brown");
+        font-weight: lighter;
+        font-size: inherit;
+      }
+
+      #chart {
+        height: 15.125rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        column-gap: 0.75rem;
+
+        .column {
+          text-align: center;
+
+          .hover {
+            position: relative;
+
+            .datashow {
+              background-color: map-get($colors, "Dark_brown");
+              color: map-get($colors, "Very_pale_orange");
+              border-radius: 0.25rem;
+              font-weight: 700;
+              padding: 0.5rem;
+              position: absolute;
+              bottom: calc(100% + 0.5rem);
+              left: 50%;
+              transform: translateX(-50%);
+              display: none;
+            }
+
+            svg {
+
+              &,
+              rect {
+                max-width: 100%;
+                border-radius: 0.25rem 0.25rem 0 0;
+              }
+
+              cursor: pointer;
+              overflow: hidden;
+            }
+
+            &:hover {
+              .datashow {
+                display: block;
+              }
+
+              svg {
+                opacity: 0.7;
+              }
+            }
+          }
+
+          .gray {
+            margin-top: 0.875rem;
+          }
+        }
+      }
+
+      hr {
+        background-color: rgba(map-get($colors, "Soft_red"), 0.25);
+        border: none;
+        height: 1px;
+        margin-top: 1.75rem;
+        margin-bottom: 1.75rem;
+      }
+
+      .balance-footer {
+
+        .total {
+          color: map-get($colors, "Dark_brown");
+          font-size: 2rem;
+          font-weight: 700;
+
+          @media (min-width: 768px) {
+            font-size: 2.25rem;
+          }
+        }
+
+        .add {
+          text-align: right;
+        }
+      }
+
+      @media (min-width: 768px) {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}

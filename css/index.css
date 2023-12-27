@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,700;1,9..40,400&display=swap");
+body,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+strong {
+  font-weight: 700;
+}
+
+main,
+section,
+img,
+svg {
+  display: block;
+}
+
+#expenses {
+  background-color: hsl(27, 66%, 92%);
+  font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+#expenses .balance {
+  width: 91.466666667%;
+  max-width: 33.75rem;
+  line-height: 1.3;
+}
+#expenses .balance .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#expenses .balance .padding {
+  padding: 1.25rem;
+}
+@media (min-width: 768px) {
+  #expenses .balance .padding {
+    padding: 1.375rem 2rem;
+  }
+}
+#expenses .balance .balance-head {
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 0.75rem;
+}
+#expenses .balance .balance-head h2 {
+  color: hsl(27, 66%, 92%);
+  font-size: inherit;
+}
+#expenses .balance .balance-head strong {
+  color: hsl(33, 100%, 98%);
+  font-size: 2rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  #expenses .balance .balance-head strong {
+    font-size: 2.25rem;
+  }
+}
+#expenses .balance .balance-main {
+  background-color: hsl(33, 100%, 98%);
+  border-radius: 0.75rem;
+  margin-top: 1rem;
+}
+#expenses .balance .balance-main > h3 {
+  color: hsl(25, 47%, 15%);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+#expenses .balance .balance-main .gray {
+  color: hsl(28, 10%, 53%);
+  font-weight: lighter;
+  font-size: inherit;
+}
+#expenses .balance .balance-main #chart {
+  height: 15.125rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+#expenses .balance .balance-main #chart .column {
+  text-align: center;
+}
+#expenses .balance .balance-main #chart .column .hover {
+  position: relative;
+}
+#expenses .balance .balance-main #chart .column .hover .datashow {
+  background-color: hsl(25, 47%, 15%);
+  color: hsl(33, 100%, 98%);
+  border-radius: 0.25rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+#expenses .balance .balance-main #chart .column .hover svg {
+  cursor: pointer;
+  overflow: hidden;
+}
+#expenses .balance .balance-main #chart .column .hover svg,
+#expenses .balance .balance-main #chart .column .hover svg rect {
+  max-width: 100%;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+#expenses .balance .balance-main #chart .column .hover:hover .datashow {
+  display: block;
+}
+#expenses .balance .balance-main #chart .column .hover:hover svg {
+  opacity: 0.7;
+}
+#expenses .balance .balance-main #chart .column .gray {
+  margin-top: 0.875rem;
+}
+#expenses .balance .balance-main hr {
+  background-color: rgba(236, 119, 95, 0.25);
+  border: none;
+  height: 1px;
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+#expenses .balance .balance-main .balance-footer .total {
+  color: hsl(25, 47%, 15%);
+  font-size: 2rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  #expenses .balance .balance-main .balance-footer .total {
+    font-size: 2.25rem;
+  }
+}
+#expenses .balance .balance-main .balance-footer .add {
+  text-align: right;
+}
+@media (min-width: 768px) {
+  #expenses .balance .balance-main {
+    margin-top: 1.5rem;
+  }
+}/*# sourceMappingURL=index.css.map */

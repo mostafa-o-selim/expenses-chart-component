@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="stylesheet" href="css/index.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <section id="expenses">
+      <div class="balance">
+        <div class="balance-head row padding">
+          <div>
+            <h2>My balance</h2>
+            <p><strong>$921.48</strong></p>
+          </div>
+          <img src="images/logo.svg" alt="My balance">
+        </div>
+        <div class="balance-main padding">
+          <h3>Spending - Last 7 days</h3>
+          <div id="chart"></div>
+          <hr>
+          <div class="balance-footer">
+            <h3 class="gray">Total this month</h3>
+            <div class="row">
+              <p><strong class="total">$478.33</strong></p>
+              <div>
+                <p class="add" data-add="0.024"><strong>+2.4%</strong></p>
+                <p class="gray">from last month</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
